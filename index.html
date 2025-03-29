@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js"></script>
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header
+      id="header"
+      class="flex justify-between items-center p-4 font-bold fixed top-0 right-0 left-0 backdrop-blur-sm text-red-500"
+    >
+      <div>
+        <h2>Portfolio</h2>
+      </div>
+      <div>
+        <ul class="flex space-x-4">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero-section" class="container flex-col justify-center">
+      <div class="my-52 text-center flex flex-col gap-4">
+        <h1 class="text-5xl text-red-500 font-extrabold">
+          Welcome to My Portfolio
+        </h1>
+        <h2 class="text-xl font-bold text-gray-400">Enjoy Yourself.</h2>
+      </div>
+      <div class="flex justify-center py-20">
+        <i class="arrow down text-center"></i>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="container py-10">
+      <h2 class="text-6xl font-extrabold text-center text-red-500">About Me</h2>
+      <div
+        class="flex flex-col md:flex-row justify-between items-center max-w-6xl gap-2"
+      >
+        <div
+          class="whitespace-normal break-words text-xl max-w-2xl md:py-32 py-10 px-10"
+        >
+          <p class="text-gray-500 text-center md:text-left">
+            Hello my name is
+            <span class="text-red-500">Rafi Sofyan Triyanto</span>, you can call
+            me <span class="text-red-500">Rafi</span>. I was born in Indonesia
+            and currently I`m studying at SMK Islam 1 Blitar. I`m so interested
+            in technology. One day I want to be a skilled programmer. I have a
+            passion for learning new things, especially in the field of
+            technology. I am currently learning about web development and data
+            scraping. I am also interested in game development.
+          </p>
+          <ul class="flex gap-4 opacity-75 justify-center md:justify-normal">
+            <li>
+              <a href="https://github.com/R1TGAMING"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/rafi-sofyan-triyanto-1b66b131b/"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/ipigemink/"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <img
+          src="/public/profile.jpg"
+          alt="Profile Picture"
+          class="rounded-full w-64 h-64"
+        />
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="container py-20 p-4">
+      <h2 class="text-6xl font-extrabold text-center text-red-500 pb-2">
+        Skills
+      </h2>
+      <div
+        class="grid md:grid-cols-6 grid-cols-3 justify-center pt-20 md:pl-10 pl-5 gap-4 space-y-4"
+      >
+        <img src="public/html-5.png" alt="" class="h-20" />
+        <img src="public/css-3.png" alt="" class="h-20" />
+        <img src="public/js.png" alt="" class="h-20" />
+        <img src="public/python.png" alt="" class="h-20" />
+        <img src="public/programing.png" alt="" class="h-20" />
+        <img
+          src="public/1174949_js_react js_logo_react_react native_icon.png"
+          alt=""
+          class="h-20"
+        />
+        <img
+          src="public/1012822_code_development_logo_mongodb_programming_icon.png"
+          alt=""
+          class="h-20"
+        />
+        <img src="public/9074204_tailwind_icon.png" alt="" class="h-20" />
+        <img src="public/selenium.png" alt="" class="h-20" />
+        <img src="public/linux.png" alt="" class="h-20" />
+        <img src="public/icons8-aws-logo-480.png" alt="" class="h-20" />
+        <img src="public/icons8-express-js-250.png" alt="" class="h-20" />
+        <img src="public/social.png" alt="" class="h-20" />
+        <img src="public/bot.png" alt="" class="h-20" />
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="container py-20 p-4">
+      <h2 class="text-6xl font-extrabold text-center text-red-500 pb-2">
+        Projects
+      </h2>
+      <div class="grid md:grid-cols-3 grid-cols-1 gap-4 pt-20">
+        <a href="https://github.com/R1TGAMING/webSubaru"
+          ><div class="card bg-slate-50 shadow-md rounded-lg p-4 h-[100%]">
+            <img src="/public/project-1.png" alt="" class="rounded-lg" />
+            <h3 class="text-xl font-bold text-red-500 pt-2">
+              Natsuki Subaru Landing Page
+            </h3>
+            <p class="text-gray-500">
+              This landing page project is built with html, tailwind, javascript
+            </p>
+          </div></a
+        >
+        <a href="https://github.com/R1TGAMING/webMushokuTensei">
+          <div class="card bg-slate-50 shadow-md rounded-lg p-4 h-[100%]">
+            <img src="/public/project-2.png" alt="" class="rounded-lg" />
+            <h3 class="text-xl font-bold text-red-500 pt-2">
+              Mushoku Tensei Landing Page
+            </h3>
+            <p class="text-gray-500">
+              This landing page project is built with html, tailwind, javascript
+            </p>
+          </div></a
+        >
+        <a href="https://github.com/R1TGAMING/webAnimeReact">
+          <div class="card bg-slate-50 shadow-md rounded-lg p-4 h-[100%]">
+            <img src="/public/project-3.png" alt="" class="rounded-lg" />
+            <h3 class="text-xl font-bold text-red-500 pt-2">Web Anime App</h3>
+            <p class="text-gray-500">
+              This Web App project is built with React, tailwind, Node JS
+            </p>
+          </div></a
+        >
+        <a href="https://github.com/R1TGAMING/">
+          <div class="card bg-slate-50 shadow-md rounded-lg p-4 h-[100%]">
+            <h3 class="text-xl font-bold text-red-500 pt-2">
+              Other Projects You Can Visit My Github...
+              <i class="fas fa-external-link text-red-500"></i>
+            </h3></div
+        ></a>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container py-20 p-4">
+      <h2 class="text-6xl font-extrabold text-center text-red-500 pb-2">
+        Contact
+      </h2>
+      <div class="p-2">
+        <form
+          action="https://formspree.io/f/xovenwyl"
+          method="POST"
+          class="flex flex-col gap-6 "
+        >
+          <input
+            type="text"
+            name="name"
+            placeholder="Name"
+            required
+            class="border border-gray-500 rounded-sm p-2"
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            required
+            class="border border-gray-500 rounded-sm p-2"
+          />
+          <textarea
+            name="message"
+            placeholder="Message"
+            required
+            class="border border-gray-500 rounded-sm p-2"
+          ></textarea>
+          <button type="submit" class="bg-red-500 w-40 p-2 rounded text-white">Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container py-10 text-center">
+        <p class="text-gray-500">This portfolio made by Rafi Sofyan Triyanto</p>
+      </div>
+    </footer>
+  </body>
+</html>
