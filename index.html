@@ -11,23 +11,51 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="stylesheet" href="style.css" />
-    <script src="main.js"></script>
+
     <title>Portfolio</title>
   </head>
   <body>
     <!-- Navbar -->
+
     <header
       id="header"
-      class="flex justify-between items-center p-4 font-bold fixed top-0 right-0 left-0 backdrop-blur-sm text-red-500"
+      class="flex z-20 justify-between md:items-center p-4 font-bold fixed top-0 right-0 left-0 backdrop-blur-sm text-red-500"
     >
       <div>
-        <h2>Portfolio</h2>
+        <a href="/"><h2>Portfolio</h2></a>
+        <ul id="ulMobile" class="hidden left-4 top-14 flex-col space-y-2">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </div>
       <div>
-        <ul class="flex space-x-4">
-          <li><a href="#about">About</a></li>
+        <!-- Mobile Menu -->
+        <div class="md:hidden">
+          <button onclick="toggleMenu()">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              width="20"
+              height="20"
+              viewBox="0 0 50 50"
+              class=""
+            >
+              <path
+                d="M 5 8 A 2.0002 2.0002 0 1 0 5 12 L 45 12 A 2.0002 2.0002 0 1 0 45 8 L 5 8 z M 5 23 A 2.0002 2.0002 0 1 0 5 27 L 45 27 A 2.0002 2.0002 0 1 0 45 23 L 5 23 z M 5 38 A 2.0002 2.0002 0 1 0 5 42 L 45 42 A 2.0002 2.0002 0 1 0 45 38 L 5 38 z"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <ul class="hidden md:flex space-x-4">
+          <li><a href="#about" data-aos="fade-up"
+            data-aos-duration="2000">About</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -35,27 +63,51 @@
       </div>
     </header>
 
+    <!-- Square -->
+    <div class="area -z-10">
+      <ul class="circles border border-black">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
     <!-- Hero Section -->
+
     <section id="hero-section" class="container flex-col justify-center">
       <div class="my-52 text-center flex flex-col gap-4">
-        <h1 class="text-5xl text-red-500 font-extrabold">
+        <h1 class="text-5xl text-red-500 font-extrabold expand-fade-in">
           Welcome to My Portfolio
         </h1>
-        <h2 class="text-xl font-bold text-gray-400">Enjoy Yourself.</h2>
+        <h2 class="text-xl font-bold text-gray-400 expand-fade-in">
+          Enjoy Yourself.
+        </h2>
       </div>
-      <div class="flex justify-center py-20">
-        <i class="arrow down text-center"></i>
+      <div class="flex justify-center py-20 arrow-animation">
+        <i class="arrow down text-center "></i>
       </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="container py-10">
-      <h2 class="text-6xl font-extrabold text-center text-red-500">About Me</h2>
+      <h2
+        class="expand-fade-in text-6xl font-extrabold text-center text-red-500"
+      >
+        About Me
+      </h2>
       <div
         class="flex flex-col md:flex-row justify-between items-center max-w-6xl gap-2"
       >
         <div
           class="whitespace-normal break-words text-xl max-w-2xl md:py-32 py-10 px-10"
+          data-aos="fade-right"
+          data-aos-duration="2000"
         >
           <p class="text-gray-500 text-center md:text-left">
             Hello my name is
@@ -90,51 +142,137 @@
           src="/public/profile.jpg"
           alt="Profile Picture"
           class="rounded-full w-64 h-64"
+          data-aos="fade"
+          data-aos-duration="2000"
         />
       </div>
     </section>
 
     <!-- Skills Section -->
     <section id="skills" class="container py-20 p-4">
-      <h2 class="text-6xl font-extrabold text-center text-red-500 pb-2">
+      <h2
+        class="text-6xl font-extrabold text-center text-red-500 pb-2 expand-fade-in"
+      >
         Skills
       </h2>
       <div
         class="grid md:grid-cols-6 grid-cols-3 justify-center pt-20 md:pl-10 pl-5 gap-4 space-y-4"
       >
-        <img src="public/html-5.png" alt="" class="h-20" />
-        <img src="public/css-3.png" alt="" class="h-20" />
-        <img src="public/js.png" alt="" class="h-20" />
-        <img src="public/python.png" alt="" class="h-20" />
-        <img src="public/programing.png" alt="" class="h-20" />
+        <img
+          src="public/html-5.png"
+          alt=""
+          class="h-20"
+          data-aos="fade"
+          data-aos-duration="2000"
+        />
+        <img
+          src="public/css-3.png"
+          alt=""
+          class="h-20"
+          data-aos="fade"
+          data-aos-duration="2500"
+        />
+        <img
+          src="public/js.png"
+          alt=""
+          class="h-20"
+          data-aos="fade"
+          data-aos-duration="3000"
+        />
+        <img
+          src="public/python.png"
+          alt=""
+          class="h-20"
+          data-aos="fade"
+          data-aos-duration="3000"
+        />
+        <img
+          src="public/programing.png"
+          alt=""
+          class="h-20"
+          data-aos="fade"
+          data-aos-duration="3000"
+        />
         <img
           src="public/1174949_js_react js_logo_react_react native_icon.png"
           alt=""
           class="h-20"
+          data-aos="fade"
+          data-aos-duration="3000"
         />
         <img
           src="public/1012822_code_development_logo_mongodb_programming_icon.png"
           alt=""
           class="h-20"
+          data-aos="fade"
+          data-aos-duration="3000"
         />
-        <img src="public/9074204_tailwind_icon.png" alt="" class="h-20" />
-        <img src="public/selenium.png" alt="" class="h-20" />
-        <img src="public/linux.png" alt="" class="h-20" />
-        <img src="public/icons8-aws-logo-480.png" alt="" class="h-20" />
-        <img src="public/icons8-express-js-250.png" alt="" class="h-20" />
-        <img src="public/social.png" alt="" class="h-20" />
-        <img src="public/bot.png" alt="" class="h-20" />
+        <img
+          src="public/9074204_tailwind_icon.png"
+          alt=""
+          class="h-20"
+          data-aos="fade"
+          data-aos-duration="3000"
+        />
+        <img
+          src="public/selenium.png"
+          alt=""
+          class="h-20"
+          data-aos="fade"
+          data-aos-duration="3000"
+        />
+        <img
+          src="public/linux.png"
+          alt=""
+          class="h-20"
+          data-aos="fade"
+          data-aos-duration="3000"
+        />
+        <img
+          src="public/icons8-aws-logo-480.png"
+          alt=""
+          class="h-20"
+          data-aos="fade"
+          data-aos-duration="3000"
+        />
+        <img
+          src="public/icons8-express-js-250.png"
+          alt=""
+          class="h-20"
+          data-aos="fade"
+          data-aos-duration="3000"
+        />
+        <img
+          src="public/social.png"
+          alt=""
+          class="h-20"
+          data-aos="fade"
+          data-aos-duration="3000"
+        />
+        <img
+          src="public/bot.png"
+          alt=""
+          class="h-20"
+          data-aos="fade"
+          data-aos-duration="3000"
+        />
       </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects" class="container py-20 p-4">
-      <h2 class="text-6xl font-extrabold text-center text-red-500 pb-2">
+      <h2
+        class="text-6xl font-extrabold text-center text-red-500 pb-2 expand-fade-in"
+      >
         Projects
       </h2>
       <div class="grid md:grid-cols-3 grid-cols-1 gap-4 pt-20">
         <a href="https://github.com/R1TGAMING/webSubaru"
-          ><div class="card bg-slate-50 shadow-md rounded-lg p-4 h-[100%]">
+          ><div
+            class="card bg-slate-50 shadow-md rounded-lg p-4 h-[100%] zoom"
+            data-aos="fade"
+            data-aos-duration="2600"
+          >
             <img src="/public/project-1.png" alt="" class="rounded-lg" />
             <h3 class="text-xl font-bold text-red-500 pt-2">
               Natsuki Subaru Landing Page
@@ -145,7 +283,11 @@
           </div></a
         >
         <a href="https://github.com/R1TGAMING/webMushokuTensei">
-          <div class="card bg-slate-50 shadow-md rounded-lg p-4 h-[100%]">
+          <div
+            class="card bg-slate-50 shadow-md rounded-lg p-4 h-[100%] zoom"
+            data-aos="fade"
+            data-aos-duration="2700"
+          >
             <img src="/public/project-2.png" alt="" class="rounded-lg" />
             <h3 class="text-xl font-bold text-red-500 pt-2">
               Mushoku Tensei Landing Page
@@ -156,7 +298,11 @@
           </div></a
         >
         <a href="https://github.com/R1TGAMING/webAnimeReact">
-          <div class="card bg-slate-50 shadow-md rounded-lg p-4 h-[100%]">
+          <div
+            class="card bg-slate-50 shadow-md rounded-lg p-4 h-[100%] zoom"
+            data-aos="fade"
+            data-aos-duration="2800"
+          >
             <img src="/public/project-3.png" alt="" class="rounded-lg" />
             <h3 class="text-xl font-bold text-red-500 pt-2">Web Anime App</h3>
             <p class="text-gray-500">
@@ -165,7 +311,11 @@
           </div></a
         >
         <a href="https://github.com/R1TGAMING/">
-          <div class="card bg-slate-50 shadow-md rounded-lg p-4 h-[100%]">
+          <div
+            class="card bg-slate-50 shadow-md rounded-lg p-4 h-[100%] zoom"
+            data-aos="fade"
+            data-aos-duration="2900"
+          >
             <h3 class="text-xl font-bold text-red-500 pt-2">
               Other Projects You Can Visit My Github...
               <i class="fas fa-external-link text-red-500"></i>
@@ -176,14 +326,16 @@
 
     <!-- Contact Section -->
     <section id="contact" class="container py-20 p-4">
-      <h2 class="text-6xl font-extrabold text-center text-red-500 pb-2">
+      <h2
+        class="text-6xl font-extrabold text-center text-red-500 pb-5 expand-fade-in"
+      >
         Contact
       </h2>
       <div class="p-2">
         <form
           action="https://formspree.io/f/xovenwyl"
           method="POST"
-          class="flex flex-col gap-6 "
+          class="flex flex-col gap-6"
         >
           <input
             type="text"
@@ -205,7 +357,9 @@
             required
             class="border border-gray-500 rounded-sm p-2"
           ></textarea>
-          <button type="submit" class="bg-red-500 w-40 p-2 rounded text-white">Submit</button>
+          <button type="submit" class="bg-red-500 w-40 p-2 rounded text-white">
+            Submit
+          </button>
         </form>
       </div>
     </section>
@@ -215,5 +369,10 @@
         <p class="text-gray-500">This portfolio made by Rafi Sofyan Triyanto</p>
       </div>
     </footer>
+
+    <script>
+      AOS.init();
+    </script>
+    <script src="main.js"></script>
   </body>
 </html>
